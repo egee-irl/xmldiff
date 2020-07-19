@@ -1,0 +1,19 @@
+name: xmldiff
+version: git
+summary: Creates diffs of XML files
+description: |
+  Creates diffs of XML files
+base: core18
+confinement: strict
+grade: devel
+
+apps:
+  xmldiff:
+    command: bin/xmldiff
+  patch:
+    command: bin/xmlpatch
+
+parts:
+  xmldiff:
+    plugin: python
+    source: .
